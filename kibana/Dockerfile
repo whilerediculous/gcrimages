@@ -33,7 +33,7 @@ RUN set -x \
     && rm kibana-$KIBANA_VERSION-linux-x86_64.tar.gz
 
 COPY run.sh /run.sh
-chmod u+x /run.sh
+RUN chmod u+x /run.sh
 EXPOSE 5601
 
 CMD ["/run.sh"]
